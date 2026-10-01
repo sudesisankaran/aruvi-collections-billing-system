@@ -15,10 +15,10 @@ const POS = {
     renderLayout: function() {
         const container = document.getElementById('page-pos');
         container.innerHTML = `
-            <div class="flex flex-col lg:flex-row gap-6 h-full p-4 lg:p-6 pb-20 lg:pb-6 bg-slate-100/50">
+            <div class="flex flex-col lg:flex-row gap-6 min-h-full lg:h-full p-4 lg:p-6 pb-20 lg:pb-6 bg-slate-100/50">
                 
                 <!-- Left Side: Products -->
-                <div class="w-full lg:w-7/12 xl:w-2/3 flex flex-col h-full bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="w-full lg:w-7/12 xl:w-2/3 flex flex-col h-[65vh] lg:h-full bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
                     <!-- Search Header -->
                     <div class="p-4 border-b border-slate-100 bg-white z-10 flex flex-col md:flex-row gap-3">
                         <div class="relative w-full md:flex-1">
@@ -44,7 +44,7 @@ const POS = {
                 </div>
 
                 <!-- Right Side: Cart & Checkout -->
-                <div class="w-full lg:w-5/12 xl:w-1/3 flex flex-col h-full bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden relative">
+                <div class="w-full lg:w-5/12 xl:w-1/3 flex flex-col h-[70vh] lg:h-full bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden relative">
                     
                     <!-- Customer Selection -->
                     <div class="p-4 border-b border-slate-100 bg-emerald-50/30">
