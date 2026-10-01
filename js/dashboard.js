@@ -15,7 +15,7 @@ const Dashboard = {
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 <!-- Stat Cards -->
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-4 hover:shadow-md transition-shadow">
-                    <div class="w-14 h-14 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center text-2xl">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-500 flex items-center justify-center text-2xl">
                         <i class="fa-solid fa-indian-rupee-sign"></i>
                     </div>
                     <div>
@@ -105,9 +105,9 @@ const Dashboard = {
             recentBillsContainer.innerHTML = `<div class="text-center py-10 text-slate-400 text-sm">No recent bills found.</div>`;
         } else {
             recentBillsContainer.innerHTML = recentInvoices.map(inv => `
-                <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100 hover:border-rose-100 transition-colors cursor-pointer" onclick="History.viewInvoice('${inv.id}')">
+                <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100 hover:border-emerald-100 transition-colors cursor-pointer" onclick="History.viewInvoice('${inv.id}')">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-500 flex items-center justify-center flex-shrink-0">
+                        <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-500 flex items-center justify-center flex-shrink-0">
                             <i class="fa-solid fa-file-invoice"></i>
                         </div>
                         <div>
@@ -158,11 +158,11 @@ const Dashboard = {
                 datasets: [{
                     label: 'Sales (₹)',
                     data: data,
-                    borderColor: '#f43f5e', // rose-500
-                    backgroundColor: 'rgba(244, 63, 94, 0.1)',
+                    borderColor: '#10b981', // emerald-500
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
                     borderWidth: 3,
                     pointBackgroundColor: '#fff',
-                    pointBorderColor: '#f43f5e',
+                    pointBorderColor: '#10b981',
                     pointBorderWidth: 2,
                     pointRadius: 4,
                     pointHoverRadius: 6,

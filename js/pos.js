@@ -24,9 +24,9 @@ const POS = {
                         <div class="relative flex-1 min-w-[200px]">
                             <i class="fa-solid fa-search absolute left-3 top-3 text-slate-400"></i>
                             <input type="text" id="pos-search" placeholder="Scan barcode or search name/SKU... (Press Enter to add)" 
-                                class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-rose-200 focus:border-primary transition-all outline-none">
+                                class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-200 focus:border-primary transition-all outline-none">
                         </div>
-                        <select id="pos-category-filter" class="w-32 sm:w-40 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-rose-200 outline-none text-sm font-medium text-slate-600 shrink-0">
+                        <select id="pos-category-filter" class="w-32 sm:w-40 px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-200 outline-none text-sm font-medium text-slate-600 shrink-0">
                             <option value="All">All Categories</option>
                             <!-- Options injected dynamically -->
                         </select>
@@ -45,24 +45,24 @@ const POS = {
                 <div class="w-full lg:w-5/12 xl:w-1/3 flex flex-col h-full bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden relative">
                     
                     <!-- Customer Selection -->
-                    <div class="p-4 border-b border-slate-100 bg-rose-50/30">
+                    <div class="p-4 border-b border-slate-100 bg-emerald-50/30">
                         <div class="flex justify-between items-center mb-3">
                             <h3 class="font-semibold text-slate-800 flex items-center gap-2">
                                 <i class="fa-solid fa-user text-primary"></i> Customer Details
                             </h3>
-                            <button id="btn-clear-customer" class="text-xs text-rose-500 hover:text-rose-700 hidden">Clear</button>
+                            <button id="btn-clear-customer" class="text-xs text-emerald-500 hover:text-emerald-700 hidden">Clear</button>
                         </div>
                         
                         <div class="space-y-3">
                             <div class="relative">
                                 <input type="text" id="pos-customer-mobile" placeholder="Mobile Number *" maxlength="10"
-                                    class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:ring-2 focus:ring-rose-200 outline-none">
+                                    class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:ring-2 focus:ring-emerald-200 outline-none">
                                 <button id="btn-search-customer" class="absolute right-2 top-1.5 p-1 text-slate-400 hover:text-primary transition-colors">
                                     <i class="fa-solid fa-search"></i>
                                 </button>
                             </div>
                             <input type="text" id="pos-customer-name" placeholder="Customer Name *" 
-                                class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:ring-2 focus:ring-rose-200 outline-none">
+                                class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:ring-2 focus:ring-emerald-200 outline-none">
                         </div>
                     </div>
 
@@ -102,18 +102,18 @@ const POS = {
 
                         <!-- Payment Method -->
                         <div class="grid grid-cols-3 gap-2 mb-4">
-                            <button class="payment-method-btn active py-2 border border-rose-200 bg-rose-50 text-primary rounded-lg text-sm font-medium transition-colors" data-method="Cash">
+                            <button class="payment-method-btn active py-2 border border-emerald-200 bg-emerald-50 text-primary rounded-lg text-sm font-medium transition-colors" data-method="Cash">
                                 <i class="fa-solid fa-money-bill-wave mb-1 block"></i> Cash
                             </button>
-                            <button class="payment-method-btn py-2 border border-slate-200 bg-white text-slate-600 hover:border-rose-200 hover:text-primary rounded-lg text-sm font-medium transition-colors" data-method="UPI">
+                            <button class="payment-method-btn py-2 border border-slate-200 bg-white text-slate-600 hover:border-emerald-200 hover:text-primary rounded-lg text-sm font-medium transition-colors" data-method="UPI">
                                 <i class="fa-solid fa-qrcode mb-1 block"></i> UPI
                             </button>
-                            <button class="payment-method-btn py-2 border border-slate-200 bg-white text-slate-600 hover:border-rose-200 hover:text-primary rounded-lg text-sm font-medium transition-colors" data-method="Card">
+                            <button class="payment-method-btn py-2 border border-slate-200 bg-white text-slate-600 hover:border-emerald-200 hover:text-primary rounded-lg text-sm font-medium transition-colors" data-method="Card">
                                 <i class="fa-solid fa-credit-card mb-1 block"></i> Card
                             </button>
                         </div>
 
-                        <button id="btn-generate-bill" class="w-full bg-primary hover:bg-primaryHover text-white py-3.5 rounded-xl font-bold text-lg shadow-lg shadow-rose-200/50 transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed">
+                        <button id="btn-generate-bill" class="w-full bg-primary hover:bg-primaryHover text-white py-3.5 rounded-xl font-bold text-lg shadow-lg shadow-emerald-200/50 transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed">
                             GENERATE BILL
                         </button>
                     </div>
@@ -143,12 +143,12 @@ const POS = {
         paymentBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 paymentBtns.forEach(b => {
-                    b.classList.remove('active', 'bg-rose-50', 'border-rose-200', 'text-primary');
+                    b.classList.remove('active', 'bg-emerald-50', 'border-emerald-200', 'text-primary');
                     b.classList.add('bg-white', 'border-slate-200', 'text-slate-600');
                 });
                 const target = e.currentTarget;
                 target.classList.remove('bg-white', 'border-slate-200', 'text-slate-600');
-                target.classList.add('active', 'bg-rose-50', 'border-rose-200', 'text-primary');
+                target.classList.add('active', 'bg-emerald-50', 'border-emerald-200', 'text-primary');
             });
         });
 
@@ -474,7 +474,7 @@ const POS = {
 
                 <div class="grid grid-cols-2 gap-3">
                     <button onclick="History.generatePDF('${invoice.id}', true)" class="flex flex-col items-center justify-center gap-2 p-3 bg-white border border-slate-200 rounded-xl hover:border-slate-300 hover:bg-slate-50 transition-colors text-slate-700 font-medium">
-                        <i class="fa-solid fa-file-pdf text-rose-500 text-xl"></i>
+                        <i class="fa-solid fa-file-pdf text-emerald-500 text-xl"></i>
                         Download PDF
                     </button>
                     <button onclick="POS.sendWhatsApp('${invoice.id}')" class="flex flex-col items-center justify-center gap-2 p-3 bg-white border border-slate-200 rounded-xl hover:border-emerald-200 hover:bg-emerald-50 transition-colors text-slate-700 font-medium">
@@ -534,16 +534,16 @@ const POS = {
             <div class="space-y-4">
                 <div>
                     <label class="block text-xs font-semibold text-slate-600 mb-1">Item Name *</label>
-                    <input type="text" id="custom-item-name" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-200 outline-none text-sm" placeholder="e.g. Alteration Charge" required>
+                    <input type="text" id="custom-item-name" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-200 outline-none text-sm" placeholder="e.g. Alteration Charge" required>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1">Price (₹) *</label>
-                        <input type="number" id="custom-item-price" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-200 outline-none text-sm" min="0" step="0.01" required>
+                        <input type="number" id="custom-item-price" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-200 outline-none text-sm" min="0" step="0.01" required>
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1">Quantity *</label>
-                        <input type="number" id="custom-item-qty" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-200 outline-none text-sm" value="1" min="1" required>
+                        <input type="number" id="custom-item-qty" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-200 outline-none text-sm" value="1" min="1" required>
                     </div>
                 </div>
             </div>

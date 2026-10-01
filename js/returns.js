@@ -25,7 +25,7 @@ const Returns = {
                         <div class="flex-1 relative">
                             <i class="fa-solid fa-file-invoice absolute left-4 top-3.5 text-slate-400"></i>
                             <input type="text" id="return-invoice-no" placeholder="Enter Invoice Number (e.g. INV-2026-00001)" 
-                                class="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-rose-200 focus:bg-white outline-none font-medium transition-all">
+                                class="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-200 focus:bg-white outline-none font-medium transition-all">
                         </div>
                         <button onclick="Returns.searchInvoice()" class="px-6 py-3 bg-slate-800 hover:bg-slate-900 text-white rounded-xl font-medium transition-colors shadow-sm">
                             Search

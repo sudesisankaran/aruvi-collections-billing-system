@@ -16,9 +16,9 @@ const Inventory = {
                     <div class="flex-1 w-full relative">
                         <i class="fa-solid fa-search absolute left-3 top-3 text-slate-400"></i>
                         <input type="text" id="inventory-search" placeholder="Search stock..." 
-                            class="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-rose-200 outline-none transition-all">
+                            class="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-200 outline-none transition-all">
                     </div>
-                    <select id="inventory-filter" class="w-full sm:w-auto px-4 py-2 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-rose-200 outline-none text-sm font-medium text-slate-600">
+                    <select id="inventory-filter" class="w-full sm:w-auto px-4 py-2 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-200 outline-none text-sm font-medium text-slate-600">
                         <option value="all">All Stock</option>
                         <option value="low">Low Stock (≤ 5)</option>
                         <option value="out">Out of Stock</option>
@@ -101,7 +101,7 @@ const Inventory = {
                 </td>
                 <td class="p-4 text-center">${statusHtml}</td>
                 <td class="p-4 text-center">
-                    <button onclick="Inventory.quickUpdateStock('${p.id}')" class="px-3 py-1.5 bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-rose-200 rounded-lg text-sm font-medium transition-colors shadow-sm">
+                    <button onclick="Inventory.quickUpdateStock('${p.id}')" class="px-3 py-1.5 bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-emerald-200 rounded-lg text-sm font-medium transition-colors shadow-sm">
                         <i class="fa-solid fa-plus-minus mr-1"></i> Update
                     </button>
                 </td>
@@ -118,7 +118,7 @@ const Inventory = {
                 <h4 class="font-bold text-slate-800 mb-2">${product.name}</h4>
                 <p class="text-sm text-slate-500 mb-4">Current Stock: <span class="font-bold text-slate-800">${product.stock}</span></p>
                 <div class="flex items-center justify-center gap-4">
-                    <input type="number" id="quick-stock-val" value="${product.stock}" min="0" class="w-24 px-3 py-2 border border-slate-200 rounded-lg text-center font-bold text-lg focus:ring-2 focus:ring-rose-200 outline-none">
+                    <input type="number" id="quick-stock-val" value="${product.stock}" min="0" class="w-24 px-3 py-2 border border-slate-200 rounded-lg text-center font-bold text-lg focus:ring-2 focus:ring-emerald-200 outline-none">
                 </div>
             </div>
         `;

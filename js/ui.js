@@ -81,7 +81,7 @@ const UI = {
                         <button class="px-4 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-300 rounded-lg hover:bg-slate-50 btn-close-modal transition-colors shadow-sm">
                             ${cancelText}
                         </button>
-                        ${onConfirm ? `<button class="px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primaryHover btn-confirm-modal transition-colors shadow-sm shadow-rose-200">${confirmText}</button>` : ''}
+                        ${onConfirm ? `<button class="px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primaryHover btn-confirm-modal transition-colors shadow-sm shadow-emerald-200">${confirmText}</button>` : ''}
                     </div>
                 </div>
             </div>

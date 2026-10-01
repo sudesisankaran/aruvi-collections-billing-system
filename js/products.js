@@ -16,7 +16,7 @@ const Products = {
                     <div class="flex-1 w-full relative">
                         <i class="fa-solid fa-search absolute left-3 top-3 text-slate-400"></i>
                         <input type="text" id="product-search" placeholder="Search products..." 
-                            class="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-rose-200 outline-none transition-all">
+                            class="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-200 outline-none transition-all">
                     </div>
                     <button onclick="Products.showAddModal()" class="w-full sm:w-auto px-4 py-2 bg-primary hover:bg-primaryHover text-white rounded-xl font-medium shadow-sm transition-colors flex items-center justify-center gap-2">
                         <i class="fa-solid fa-plus"></i> Add Product
@@ -98,7 +98,7 @@ const Products = {
                         <button onclick='Products.showEditModal(${JSON.stringify(p).replace(/'/g, "&#39;")})' class="w-8 h-8 rounded bg-blue-50 text-blue-600 hover:bg-blue-100 flex items-center justify-center transition-colors">
                             <i class="fa-solid fa-pen"></i>
                         </button>
-                        <button onclick="Products.deleteProduct('${p.id}')" class="w-8 h-8 rounded bg-rose-50 text-rose-600 hover:bg-rose-100 flex items-center justify-center transition-colors">
+                        <button onclick="Products.deleteProduct('${p.id}')" class="w-8 h-8 rounded bg-emerald-50 text-emerald-600 hover:bg-emerald-100 flex items-center justify-center transition-colors">
                             <i class="fa-solid fa-trash-can"></i>
                         </button>
                     </div>
@@ -127,43 +127,43 @@ const Products = {
                 <div class="grid grid-cols-2 gap-4">
                     <div class="col-span-2">
                         <label class="block text-xs font-semibold text-slate-600 mb-1">Product Name *</label>
-                        <input type="text" id="pf-name" value="${p.name || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-200 outline-none text-sm" required>
+                        <input type="text" id="pf-name" value="${p.name || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-200 outline-none text-sm" required>
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1">Product Code *</label>
-                        <input type="text" id="pf-code" value="${p.code || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-200 outline-none text-sm" required>
+                        <input type="text" id="pf-code" value="${p.code || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-200 outline-none text-sm" required>
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1">SKU</label>
-                        <input type="text" id="pf-sku" value="${p.sku || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-200 outline-none text-sm">
+                        <input type="text" id="pf-sku" value="${p.sku || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-200 outline-none text-sm">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1">Category *</label>
-                        <input type="text" id="pf-category" value="${p.category || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-200 outline-none text-sm" required>
+                        <input type="text" id="pf-category" value="${p.category || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-200 outline-none text-sm" required>
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1">Size</label>
-                        <input type="text" id="pf-size" value="${p.size || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-200 outline-none text-sm">
+                        <input type="text" id="pf-size" value="${p.size || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-200 outline-none text-sm">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1">Color</label>
-                        <input type="text" id="pf-color" value="${p.color || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-200 outline-none text-sm">
+                        <input type="text" id="pf-color" value="${p.color || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-200 outline-none text-sm">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1">Stock Quantity *</label>
-                        <input type="number" id="pf-stock" value="${p.stock !== undefined ? p.stock : 10}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-200 outline-none text-sm" required min="0">
+                        <input type="number" id="pf-stock" value="${p.stock !== undefined ? p.stock : 10}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-200 outline-none text-sm" required min="0">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1">Price (₹) *</label>
-                        <input type="number" id="pf-price" value="${p.price || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-200 outline-none text-sm" required min="0" step="0.01">
+                        <input type="number" id="pf-price" value="${p.price || ''}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-200 outline-none text-sm" required min="0" step="0.01">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-600 mb-1">Discount (%)</label>
-                        <input type="number" id="pf-discount" value="${p.discount || 0}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-200 outline-none text-sm" min="0" max="100">
+                        <input type="number" id="pf-discount" value="${p.discount || 0}" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-200 outline-none text-sm" min="0" max="100">
                     </div>
                     <div class="col-span-2">
                         <label class="block text-xs font-semibold text-slate-600 mb-1">Image URL</label>
-                        <input type="text" id="pf-image" value="${p.image || ''}" placeholder="https://..." class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-rose-200 outline-none text-sm">
+                        <input type="text" id="pf-image" value="${p.image || ''}" placeholder="https://..." class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-200 outline-none text-sm">
                     </div>
                 </div>
             </form>

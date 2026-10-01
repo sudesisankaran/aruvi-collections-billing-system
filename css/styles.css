@@ -60,12 +60,12 @@
 
 /* Nav Link Active State */
 .nav-link.active {
-    background-color: #ffe4e6; /* rose-100 */
-    color: #e11d48; /* rose-600 */
+    background-color: #d1fae5; /* emerald-100 */
+    color: #059669; /* emerald-600 */
     font-weight: 600;
 }
 .nav-link.active i {
-    color: #e11d48;
+    color: #059669;
 }
 
 /* POS specific styles */

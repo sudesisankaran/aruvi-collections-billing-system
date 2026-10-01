@@ -16,10 +16,10 @@ const History = {
                     <div class="flex-1 w-full relative">
                         <i class="fa-solid fa-search absolute left-3 top-3 text-slate-400"></i>
                         <input type="text" id="history-search" placeholder="Search invoices, customers, mobile..." 
-                            class="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-rose-200 focus:border-primary outline-none transition-all">
+                            class="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-200 focus:border-primary outline-none transition-all">
                     </div>
                     <div class="flex gap-3 w-full sm:w-auto">
-                        <select id="history-filter-date" class="px-4 py-2 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-rose-200 outline-none text-sm font-medium text-slate-600 flex-1 sm:flex-none">
+                        <select id="history-filter-date" class="px-4 py-2 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-200 outline-none text-sm font-medium text-slate-600 flex-1 sm:flex-none">
                             <option value="all">All Time</option>
                             <option value="today">Today</option>
                             <option value="week">This Week</option>
@@ -120,7 +120,7 @@ const History = {
                         <button onclick="History.viewInvoice('${inv.id}')" class="w-8 h-8 rounded bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors" title="View">
                             <i class="fa-regular fa-eye"></i>
                         </button>
-                        <button onclick="History.generatePDF('${inv.id}', true)" class="w-8 h-8 rounded bg-rose-50 text-rose-600 hover:bg-rose-100 transition-colors" title="Download PDF">
+                        <button onclick="History.generatePDF('${inv.id}', true)" class="w-8 h-8 rounded bg-emerald-50 text-emerald-600 hover:bg-emerald-100 transition-colors" title="Download PDF">
                             <i class="fa-solid fa-file-pdf"></i>
                         </button>
                         <button onclick="POS.sendWhatsApp('${inv.id}')" class="w-8 h-8 rounded bg-emerald-50 text-emerald-600 hover:bg-emerald-100 transition-colors" title="WhatsApp">
@@ -207,7 +207,7 @@ const History = {
                 </div>
             </div>
             <div class="flex justify-end gap-3 mt-4">
-                 <button onclick="History.generatePDF('${id}', true)" class="px-4 py-2 bg-rose-50 text-rose-600 rounded-lg hover:bg-rose-100 font-medium text-sm transition-colors">
+                 <button onclick="History.generatePDF('${id}', true)" class="px-4 py-2 bg-emerald-50 text-emerald-600 rounded-lg hover:bg-emerald-100 font-medium text-sm transition-colors">
                     <i class="fa-solid fa-download mr-1"></i> Download PDF
                 </button>
                 <button onclick="History.generatePDF('${id}', false, true)" class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 font-medium text-sm transition-colors">
@@ -233,7 +233,7 @@ const History = {
 
         // Shop Header
         doc.setFontSize(22);
-        doc.setTextColor(225, 29, 72); // Rose 600
+        doc.setTextColor(5, 150, 105); // Emerald 600
         doc.setFont("helvetica", "bold");
         doc.text(settings.shopName, 105, 20, { align: "center" });
         
@@ -281,7 +281,7 @@ const History = {
             head: [['Product Description', 'Qty', 'Unit Price', 'Discount', 'Total']],
             body: tableBody,
             theme: 'striped',
-            headStyles: { fillColor: [244, 63, 94] }, // Rose 500
+            headStyles: { fillColor: [16, 185, 129] }, // Emerald 500
             styles: { fontSize: 9, cellPadding: 4 },
             columnStyles: {
                 0: { cellWidth: 80 },
@@ -304,7 +304,7 @@ const History = {
 
         doc.setFontSize(12);
         doc.setFont("helvetica", "bold");
-        doc.setTextColor(225, 29, 72);
+        doc.setTextColor(5, 150, 105);
         doc.text("Grand Total:", 140, finalY + 17);
         doc.text(`Rs. ${invoice.grandTotal.toFixed(2)}`, 190, finalY + 17, { align: "right" });
 

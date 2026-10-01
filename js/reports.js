@@ -156,7 +156,7 @@ const Reports = {
                     labels: Object.keys(catSales).length > 0 ? Object.keys(catSales) : ['No Data'],
                     datasets: [{
                         data: Object.keys(catSales).length > 0 ? Object.values(catSales) : [1],
-                        backgroundColor: ['#f43f5e', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#cbd5e1'],
+                        backgroundColor: ['#10b981', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#cbd5e1'],
                         borderWidth: 0
                     }]
                 },
@@ -181,7 +181,7 @@ const Reports = {
                     datasets: [{
                         label: 'Amount Received (₹)',
                         data: Object.values(payMethods),
-                        backgroundColor: ['#f43f5e', '#3b82f6', '#10b981'],
+                        backgroundColor: ['#10b981', '#3b82f6', '#10b981'],
                         borderRadius: 6
                     }]
                 },

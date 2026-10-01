@@ -16,7 +16,7 @@ const Customers = {
                     <div class="flex-1 w-full relative">
                         <i class="fa-solid fa-search absolute left-3 top-3 text-slate-400"></i>
                         <input type="text" id="customer-search" placeholder="Search by name or mobile..." 
-                            class="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-rose-200 outline-none transition-all">
+                            class="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-200 outline-none transition-all">
                     </div>
                 </div>
 
@@ -70,7 +70,7 @@ const Customers = {
             <tr class="hover:bg-slate-50 transition-colors">
                 <td class="p-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-lg">
+                        <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-lg">
                             ${c.name.charAt(0).toUpperCase()}
                         </div>
                         <div>
@@ -91,7 +91,7 @@ const Customers = {
                     ${lastDate}
                 </td>
                 <td class="p-4 text-center">
-                    <button onclick="Customers.viewHistory('${c.mobile}')" class="px-3 py-1.5 bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-rose-200 rounded-lg text-sm font-medium transition-colors">
+                    <button onclick="Customers.viewHistory('${c.mobile}')" class="px-3 py-1.5 bg-white border border-slate-200 text-slate-600 hover:text-primary hover:border-emerald-200 rounded-lg text-sm font-medium transition-colors">
                         View History
                     </button>
                 </td>
